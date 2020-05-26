@@ -15,7 +15,8 @@ RUN set -ex; \
 		libpng-dev \
 	; \
 	\
-	docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ --with-png=/usr/include/ ; \
+	# 7.4: --with-png-dir has been removed. libpng is required.--with-freetype-dir becomes --with-freetype.--with-jpeg-dir becomes --with-jpeg.
+	docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ ; \
 	docker-php-ext-install gd mysqli pdo_mysql opcache zip; \
 	pecl install redis; \
 	docker-php-ext-enable redis; \
