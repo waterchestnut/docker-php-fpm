@@ -13,6 +13,8 @@ RUN set -ex; \
 		libfreetype6-dev \
 		libjpeg62-turbo-dev \
 		libpng-dev \
+		libzip-dev \
+		zip \
 	; \
 	\
 	# 7.4: --with-png-dir has been removed. libpng is required.--with-freetype-dir becomes --with-freetype.--with-jpeg-dir becomes --with-jpeg.
