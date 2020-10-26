@@ -22,6 +22,8 @@ RUN set -ex; \
 	docker-php-ext-install gd mysqli pdo_mysql opcache zip; \
 	pecl install redis; \
 	docker-php-ext-enable redis; \
+	pecl install rdkafka; \
+	docker-php-ext-enable rdkafka; \
 	\
     # reset apt-mark's "manual" list so that "purge --auto-remove" will remove all build dependencies
 	apt-mark auto '.*' > /dev/null; \
