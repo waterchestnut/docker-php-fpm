@@ -3,6 +3,11 @@ MAINTAINER waterchestnut "lingbinmeng@hotmail.com"
 
 COPY php.ini /usr/local/etc/php/php.ini
 
+# install librdkafka
+RUN set -ex; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends librdkafka-dev
+
 # install the PHP extensions
 RUN set -ex; \
 	\
