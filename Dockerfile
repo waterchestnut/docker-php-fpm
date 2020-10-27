@@ -3,7 +3,7 @@ MAINTAINER waterchestnut "lingbinmeng@hotmail.com"
 
 COPY php.ini /usr/local/etc/php/php.ini
 
-# install librdkafka
+# install librdkafka(rdkafka的依赖项)
 RUN set -ex; \
     apt-get update; \
     apt-get install -y --no-install-recommends librdkafka-dev
