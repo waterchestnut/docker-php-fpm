@@ -29,6 +29,9 @@ RUN set -ex; \
 	docker-php-ext-enable redis; \
 	pecl install rdkafka; \
 	docker-php-ext-enable rdkafka; \
+	# mongodb
+    pecl install mongodb; \
+    docker-php-ext-enable mongodb; \
 	\
     # reset apt-mark's "manual" list so that "purge --auto-remove" will remove all build dependencies
 	apt-mark auto '.*' > /dev/null; \
