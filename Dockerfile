@@ -51,7 +51,7 @@ RUN set -ex; \
 
 # install bcmatch extensions
 RUN set -ex; \
-    docker-php-ext-install bcmath; \
+    docker-php-ext-install bcmath;
 
 VOLUME /wwwroot
 
