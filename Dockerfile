@@ -1,4 +1,4 @@
-FROM php:7.4.6-fpm
+FROM php:7.4.22-fpm
 MAINTAINER waterchestnut "lingbinmeng@hotmail.com"
 
 COPY php.ini /usr/local/etc/php/php.ini
